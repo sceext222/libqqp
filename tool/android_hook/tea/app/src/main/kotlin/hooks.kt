@@ -19,8 +19,8 @@ class Hooks(val cl: ClassLoader) {
                 val data: String = print_bytes(param.args[0] as ByteArray?)
                 val data2: String = print_bytes(param.args[3] as ByteArray?)
                 val result: String = print_bytes(param.getResult() as ByteArray?)
-
-                log_debug("${ENCRYPT}: ${param.args[1] as Int}, ${param.args[2] as Int}, ${data}\n    ${data2}\n -> ${result}")
+                // improve output style
+                log_debug("${ENCRYPT}: ${param.args[1] as Int}, ${param.args[2] as Int}, ${data2}\n    ${data}\n -> ${result}")
             }
         })
 
@@ -31,7 +31,7 @@ class Hooks(val cl: ClassLoader) {
                 val data2: String = print_bytes(param.args[3] as ByteArray?)
                 val result: String = print_bytes(param.getResult() as ByteArray?)
 
-                log_debug("${DECRYPT}: ${param.args[1] as Int}, ${param.args[2] as Int}, ${data}\n    ${data2}\n -> ${result}")
+                log_debug("${DECRYPT}: ${param.args[1] as Int}, ${param.args[2] as Int}, ${data2}\n    ${data}\n -> ${result}")
             }
         })
 
