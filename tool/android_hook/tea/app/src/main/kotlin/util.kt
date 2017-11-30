@@ -35,4 +35,17 @@ fun print_string_raw(text: String?): String {
 }
 
 
-// TODO
+const val HEX_CHAR: String = "0123456789abcdef"
+
+fun print_bytes(data: ByteArray?): String {
+    if (data == null) {
+        return "null"
+    }
+    val o = StringBuilder(data.size * 3)
+    for (b in data) {
+        o.append(' ')
+        o.append(HEX_CHAR[((b as Int) ushr 4) and 0x0f])
+        o.append(HEX_CHAR[(b as Int) and 0x0f])
+    }
+    return o.toString()
+}
