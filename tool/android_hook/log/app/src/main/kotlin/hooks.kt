@@ -34,8 +34,8 @@ class Hooks(val cl: ClassLoader) {
             override fun beforeHookedMethod(param: MethodHookParam) {
                 val text: String? = param.args[0] as String?
                 val text2: String? = param.args[1] as String?
-
-                log_debug("${LOGI}: ${print_string(text)}, ${print_string_raw(text2)}")
+                // improve print style
+                log_debug("${LOGI}: ${print_string(text2)}, ${print_string_raw(text)}")
             }
         })
         hooked("LOGI(String, String)")

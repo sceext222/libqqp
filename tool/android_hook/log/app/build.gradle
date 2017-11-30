@@ -7,8 +7,8 @@ android {
         applicationId "org.sceext.android_hook.qq.log"
         minSdkVersion 21
         targetSdkVersion 26
-        versionName "0.1.0-1"
-        versionCode 1
+        versionName "0.1.0"
+        versionCode 2
     }
     buildTypes {
         release {
