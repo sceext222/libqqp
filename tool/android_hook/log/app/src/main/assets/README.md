@@ -27,7 +27,7 @@ TODO
 + **3**. Use `adb logcat` to see DEBUG logs.
 
   ```
-  TODO
+  > adb logcat '*:S Xposed'
   ```
 
 
