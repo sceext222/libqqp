@@ -16,7 +16,7 @@
       android:value="true" />
     <meta-data
       android:name="xposeddescription"
-      android:value="Hook com.tencent.mobileqq: TODO" />
+      android:value="Hook com.tencent.mobileqq: oicq.wlogin_sdk.tools.util.LOG*" />
     <meta-data
       android:name="xposedminversion"
       android:value="88" />

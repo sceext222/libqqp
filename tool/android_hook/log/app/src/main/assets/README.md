@@ -6,13 +6,18 @@
 
 Hook package: `com.tencent.mobileqq`, version `7.2.5` (`744`)
 
-Hook class: ``
+Hook class: `oicq.wlogin_sdk.tools.util`
 
-Hook methods:
+Hook methods: (6)
 
-| hook type | method |
-| :-------: | :----- |
-TODO
+|  # | hook type | method |
+| -: | :-------: | :----- |
+|  1 | [before]  | `public static void LOGI(String str)` |
+|  2 | [before]  | `public static void LOGI(String str, String str2)` |
+|  3 | [before]  | `public static void LOGD(String str)` |
+|  4 | [before]  | `public static void LOGD(String str, String str2)` |
+|  5 | [before]  | `public static void LOGW(String str, String str2)` |
+|  6 | [before]  | `public static void LOGW(String str, String str2, String str3)` |
 
 
 ## How to use this tool
