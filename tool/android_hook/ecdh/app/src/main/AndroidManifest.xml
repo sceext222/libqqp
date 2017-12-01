@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="org.sceext.android_hook.qq.ecdh" >
+
+  <application
+    android:allowBackup="true"
+    android:label="@string/app_name"
+    android:icon="@mipmap/ic_launcher"
+    android:roundIcon="@mipmap/ic_launcher_round" >
+
+    <meta-data
+      android:name="xposedmodule"
+      android:value="true" />
+    <meta-data
+      android:name="xposeddescription"
+      android:value="Hook com.tencent.mobileqq: oicq.wlogin_sdk.tools.EcdhCrypt  (ECDH)" />
+    <meta-data
+      android:name="xposedminversion"
+      android:value="88" />
+  </application>
+</manifest>
