@@ -16,9 +16,9 @@ class Hooks(val cl: ClassLoader) {
         // encrypt(byte[], int, int, byte[]) -> byte[]
         findAndHookMethod(Config.HOOK_CLASS, cl, ENCRYPT, ByteArray::class.java, Int::class.java, Int::class.java, ByteArray::class.java, object: XC_MethodHook() {
             override fun afterHookedMethod(param: MethodHookParam) {
-                val data: String = print_bytes(param.args[0] as ByteArray?)
-                val data2: String = print_bytes(param.args[3] as ByteArray?)
-                val result: String = print_bytes(param.getResult() as ByteArray?)
+                val data = print_bytes(param.args[0] as ByteArray?)
+                val data2 = print_bytes(param.args[3] as ByteArray?)
+                val result = print_bytes(param.getResult() as ByteArray?)
                 // improve output style
                 log_debug("${ENCRYPT}: ${param.args[1] as Int}, ${param.args[2] as Int}, ${data2}\n    ${data}\n -> ${result}")
             }
@@ -27,9 +27,9 @@ class Hooks(val cl: ClassLoader) {
         // decrypt(byte[], int, int, byte[]) -> byte[]
         findAndHookMethod(Config.HOOK_CLASS, cl, DECRYPT, ByteArray::class.java, Int::class.java, Int::class.java, ByteArray::class.java, object: XC_MethodHook() {
             override fun afterHookedMethod(param: MethodHookParam) {
-                val data: String = print_bytes(param.args[0] as ByteArray?)
-                val data2: String = print_bytes(param.args[3] as ByteArray?)
-                val result: String = print_bytes(param.getResult() as ByteArray?)
+                val data = print_bytes(param.args[0] as ByteArray?)
+                val data2 = print_bytes(param.args[3] as ByteArray?)
+                val result = print_bytes(param.getResult() as ByteArray?)
 
                 log_debug("${DECRYPT}: ${param.args[1] as Int}, ${param.args[2] as Int}, ${data2}\n    ${data}\n -> ${result}")
             }

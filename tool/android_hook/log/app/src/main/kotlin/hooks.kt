@@ -22,7 +22,7 @@ class Hooks(val cl: ClassLoader) {
         // LOGI(String)
         findAndHookMethod(Config.HOOK_CLASS, cl, LOGI, String::class.java, object: XC_MethodHook() {
             override fun beforeHookedMethod(param: MethodHookParam) {
-                val text: String? = param.args[0] as String?
+                val text = param.args[0] as String?
 
                 log_debug("${LOGI}: ${print_string_raw(text)}")
             }
@@ -32,8 +32,8 @@ class Hooks(val cl: ClassLoader) {
         // LOGI(String, String)
         findAndHookMethod(Config.HOOK_CLASS, cl, LOGI, String::class.java, String::class.java, object: XC_MethodHook() {
             override fun beforeHookedMethod(param: MethodHookParam) {
-                val text: String? = param.args[0] as String?
-                val text2: String? = param.args[1] as String?
+                val text = param.args[0] as String?
+                val text2 = param.args[1] as String?
                 // improve print style
                 log_debug("${LOGI}: ${print_string(text2)}, ${print_string_raw(text)}")
             }
@@ -43,7 +43,7 @@ class Hooks(val cl: ClassLoader) {
         // LOGD(String)
         findAndHookMethod(Config.HOOK_CLASS, cl, LOGD, String::class.java, object: XC_MethodHook() {
             override fun beforeHookedMethod(param: MethodHookParam) {
-                val text: String? = param.args[0] as String?
+                val text = param.args[0] as String?
 
                 log_debug("${LOGD}: ${print_string_raw(text)}")
             }
@@ -53,8 +53,8 @@ class Hooks(val cl: ClassLoader) {
         // LOGD(String, String)
         findAndHookMethod(Config.HOOK_CLASS, cl, LOGD, String::class.java, String::class.java, object: XC_MethodHook() {
             override fun beforeHookedMethod(param: MethodHookParam) {
-                val text: String? = param.args[0] as String?
-                val text2: String? = param.args[1] as String?
+                val text = param.args[0] as String?
+                val text2 = param.args[1] as String?
 
                 log_debug("${LOGD}: ${print_string(text)}, ${print_string_raw(text2)}")
             }
@@ -64,8 +64,8 @@ class Hooks(val cl: ClassLoader) {
         // LOGW(String, String)
         findAndHookMethod(Config.HOOK_CLASS, cl, LOGW, String::class.java, String::class.java, object: XC_MethodHook() {
             override fun beforeHookedMethod(param: MethodHookParam) {
-                val text: String? = param.args[0] as String?
-                val text2: String? = param.args[1] as String?
+                val text = param.args[0] as String?
+                val text2 = param.args[1] as String?
 
                 log_debug("${LOGW}: ${print_string(text)}, ${print_string_raw(text2)}")
             }
@@ -75,9 +75,9 @@ class Hooks(val cl: ClassLoader) {
         // LOGW(String, String, String)
         findAndHookMethod(Config.HOOK_CLASS, cl, LOGW, String::class.java, String::class.java, String::class.java, object: XC_MethodHook() {
             override fun beforeHookedMethod(param: MethodHookParam) {
-                val text: String? = param.args[0] as String?
-                val text2: String? = param.args[1] as String?
-                val text3: String? = param.args[2] as String?
+                val text = param.args[0] as String?
+                val text2 = param.args[1] as String?
+                val text3 = param.args[2] as String?
 
                 log_debug("${LOGW}: ${print_string(text)}, ${print_string(text2)}, ${print_string_raw(text3)}")
             }
