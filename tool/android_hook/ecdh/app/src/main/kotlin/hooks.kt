@@ -29,21 +29,21 @@ class Hooks(val cl: ClassLoader) {
                 val s2 = print_string(param.args[1] as String?)
                 val s3 = print_string(param.args[3] as String?)
 
-                log_debug("${GEN_ECDH_KEY_EX}: ${s1}, ${s2}, ${s3} -> ${param.getResult() as Int}")
+                log_debug("${GEN_ECDH_KEY_EX}: ${s1}, ${s2}, ${s3} -> ${param.result as Int}")
             }
         })
 
         // after: GenereateKey() -> int
         findAndHookMethod(Config.HOOK_CLASS, cl, GENEREATE_KEY, object: XC_MethodHook() {
             override fun afterHookedMethod(param: MethodHookParam) {
-                log_debug("${GENEREATE_KEY}: -> ${param.getResult() as Int}")
+                log_debug("${GENEREATE_KEY}: -> ${param.result as Int}")
             }
         })
 
         // after: get_c_pub_key() -> byte[]
         findAndHookMethod(Config.HOOK_CLASS, cl, GET_C_PUB_KEY, object: XC_MethodHook() {
             override fun afterHookedMethod(param: MethodHookParam) {
-                val result = print_bytes(param.getResult() as ByteArray?)
+                val result = print_bytes(param.result as ByteArray?)
                 log_debug("${GET_C_PUB_KEY}: -> ${result}")
             }
         })
@@ -67,7 +67,7 @@ class Hooks(val cl: ClassLoader) {
         // after: get_g_share_key() -> byte[]
         findAndHookMethod(Config.HOOK_CLASS, cl, GET_G_SHARE_KEY, object: XC_MethodHook() {
             override fun afterHookedMethod(param: MethodHookParam) {
-                val result = print_bytes(param.getResult() as ByteArray?)
+                val result = print_bytes(param.result as ByteArray?)
                 log_debug("${GET_G_SHARE_KEY}: -> ${result}")
             }
         })
@@ -84,7 +84,7 @@ class Hooks(val cl: ClassLoader) {
         findAndHookMethod(Config.HOOK_CLASS, cl, CAL_SHARE_KEY_MD5_BY_PEER_PUBLIC_KEY, ByteArray::class.java, object: XC_MethodHook() {
             override fun afterHookedMethod(param: MethodHookParam) {
                 val data = print_bytes(param.args[0] as ByteArray?)
-                val result = print_bytes(param.getResult() as ByteArray?)
+                val result = print_bytes(param.result as ByteArray?)
                 log_debug("${CAL_SHARE_KEY_MD5_BY_PEER_PUBLIC_KEY}: ${data} -> ${result}")
             }
         })
@@ -92,14 +92,14 @@ class Hooks(val cl: ClassLoader) {
         // after: initShareKeyByDefault() -> int
         findAndHookMethod(Config.HOOK_CLASS, cl, INIT_SHARE_KEY_BY_DEFAULT, object: XC_MethodHook() {
             override fun afterHookedMethod(param: MethodHookParam) {
-                log_debug("${INIT_SHARE_KEY_BY_DEFAULT}: -> ${param.getResult() as Int}")
+                log_debug("${INIT_SHARE_KEY_BY_DEFAULT}: -> ${param.result as Int}")
             }
         })
 
         // after: initShareKey() -> int
         findAndHookMethod(Config.HOOK_CLASS, cl, INIT_SHARE_KEY, object: XC_MethodHook() {
             override fun afterHookedMethod(param: MethodHookParam) {
-                log_debug("${INIT_SHARE_KEY}: -> ${param.getResult() as Int}")
+                log_debug("${INIT_SHARE_KEY}: -> ${param.result as Int}")
             }
         })
 
