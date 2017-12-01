@@ -26,8 +26,8 @@ fun print_file(f: File?): String {
 
 class Hooks(val cl: ClassLoader) {
     val GET_MD5: String = "getMD5"
-    val B2IU: String = "b2iu"
-    val BYTE_HEX: String = "byteHEX"
+    //val B2IU: String = "b2iu"
+    //val BYTE_HEX: String = "byteHEX"
     val TO_MD5_BYTE: String = "toMD5Byte"
     val TO_MD5: String = "toMD5"
     val GET_MD5_STRING: String = "getMD5String"
@@ -51,21 +51,19 @@ class Hooks(val cl: ClassLoader) {
             }
         })
 
-        // FIXME
         // b2iu(byte) -> long
-        findAndHookMethod(Config.HOOK_CLASS, cl, B2IU, Byte::class.java, object: XC_MethodHook() {
-            override fun afterHookedMethod(param: MethodHookParam) {
-                log_debug("${B2IU}: ${param.args[0] as Byte} -> ${param.result as Long}")
-            }
-        })
+        //findAndHookMethod(Config.HOOK_CLASS, cl, B2IU, Byte::class.java, object: XC_MethodHook() {
+        //    override fun afterHookedMethod(param: MethodHookParam) {
+        //        log_debug("${B2IU}: ${param.args[0] as Byte} -> ${param.result as Long}")
+        //    }
+        //})
 
-        // FIXME
         // byteHEX(byte) -> String
-        findAndHookMethod(Config.HOOK_CLASS, cl, BYTE_HEX, Byte::class.java, object: XC_MethodHook() {
-            override fun afterHookedMethod(param: MethodHookParam) {
-                log_debug("${BYTE_HEX}: ${param.args[0] as Byte} -> ${param.result as String?}")
-            }
-        })
+        //findAndHookMethod(Config.HOOK_CLASS, cl, BYTE_HEX, Byte::class.java, object: XC_MethodHook() {
+        //    override fun afterHookedMethod(param: MethodHookParam) {
+        //        log_debug("${BYTE_HEX}: ${param.args[0] as Byte} -> ${param.result as String?}")
+        //    }
+        //})
 
         // toMD5Byte(byte[]) -> byte[]
         findAndHookMethod(Config.HOOK_CLASS, cl, TO_MD5_BYTE, ByteArray::class.java, object: XC_MethodHook() {
