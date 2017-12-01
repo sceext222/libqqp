@@ -73,7 +73,7 @@ class Hooks(val cl: ClassLoader) {
         })
 
         // before: set_g_share_key(byte[])
-        findAndHookMethod(Config.HOOK_CLASS, cl, SET_G_SHARE_KEY, object: XC_MethodHook() {
+        findAndHookMethod(Config.HOOK_CLASS, cl, SET_G_SHARE_KEY, ByteArray::class.java, object: XC_MethodHook() {
             override fun beforeHookedMethod(param: MethodHookParam) {
                 val data = print_bytes(param.args[0] as ByteArray?)
                 log_debug("${SET_G_SHARE_KEY}: ${data}")
