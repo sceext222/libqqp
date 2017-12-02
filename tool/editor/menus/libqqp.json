@@ -1,0 +1,91 @@
+{
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "libqqp",
+          "submenu": [
+            {
+              "label": "Count HEX Bytes",
+              "command": "libqqp:hex_count_bytes"
+            },
+            {
+              "label": "HEX to text",
+              "command": "libqqp:hex_to_text"
+            },
+            {
+              "label": "HEX to 10",
+              "command": "libqqp:hex_to_10"
+            },
+            {
+              "label": "HEX to IPv4",
+              "command": "libqqp:hex_to_ipv4"
+            },
+            {
+              "type": "separator"
+            },
+            {
+              "label": "Format HEX text",
+              "command": "libqqp:hex_format"
+            },
+            {
+              "type": "separator"
+            },
+            {
+              "label": "Extract HEX from logcat (android_hook)",
+              "command": "libqqp:extract_logcat"
+            },
+            {
+              "label": "Extract HEX from wireshark",
+              "command": "libqqp:extract_wireshark"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "libqqp",
+        "submenu": [
+          {
+            "label": "Count HEX Bytes",
+            "command": "libqqp:hex_count_bytes"
+          },
+          {
+            "label": "HEX to text",
+            "command": "libqqp:hex_to_text"
+          },
+          {
+            "label": "HEX to 10",
+            "command": "libqqp:hex_to_10"
+          },
+          {
+            "label": "HEX to IPv4",
+            "command": "libqqp:hex_to_ipv4"
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "label": "Format HEX text",
+            "command": "libqqp:hex_format"
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "label": "Extract HEX from logcat (android_hook)",
+            "command": "libqqp:extract_logcat"
+          },
+          {
+            "label": "Extract HEX from wireshark",
+            "command": "libqqp:extract_wireshark"
+          }
+        ]
+      }
+    ]
+  }
+}
