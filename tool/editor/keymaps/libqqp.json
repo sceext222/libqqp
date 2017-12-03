@@ -1,4 +1,12 @@
 {
   "atom-text-editor": {
+    "alt-t": "libqqp:hex-to-text",
+    "alt-0": "libqqp:hex-to-10",
+    "alt-i": "libqqp:hex-to-ipv4",
+
+    "alt-f": "libqqp:hex-format",
+
+    "alt-e": "libqqp:extract-logcat",
+    "alt-shift-e": "libqqp:extract-wireshark"
   }
 }

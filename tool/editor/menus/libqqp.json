@@ -7,38 +7,38 @@
           "label": "libqqp",
           "submenu": [
             {
-              "label": "Count HEX Bytes",
-              "command": "libqqp:hex_count_bytes"
+              "label": "Toggle count HEX Bytes",
+              "command": "libqqp:hex-count-bytes"
             },
             {
               "label": "HEX to text",
-              "command": "libqqp:hex_to_text"
+              "command": "libqqp:hex-to-text"
             },
             {
               "label": "HEX to 10",
-              "command": "libqqp:hex_to_10"
+              "command": "libqqp:hex-to-10"
             },
             {
               "label": "HEX to IPv4",
-              "command": "libqqp:hex_to_ipv4"
+              "command": "libqqp:hex-to-ipv4"
             },
             {
               "type": "separator"
             },
             {
               "label": "Format HEX text",
-              "command": "libqqp:hex_format"
+              "command": "libqqp:hex-format"
             },
             {
               "type": "separator"
             },
             {
               "label": "Extract HEX from logcat (android_hook)",
-              "command": "libqqp:extract_logcat"
+              "command": "libqqp:extract-logcat"
             },
             {
               "label": "Extract HEX from wireshark",
-              "command": "libqqp:extract_wireshark"
+              "command": "libqqp:extract-wireshark"
             }
           ]
         }
@@ -51,38 +51,38 @@
         "label": "libqqp",
         "submenu": [
           {
-            "label": "Count HEX Bytes",
-            "command": "libqqp:hex_count_bytes"
+            "label": "Toggle count HEX Bytes",
+            "command": "libqqp:hex-count-bytes"
           },
           {
             "label": "HEX to text",
-            "command": "libqqp:hex_to_text"
+            "command": "libqqp:hex-to-text"
           },
           {
             "label": "HEX to 10",
-            "command": "libqqp:hex_to_10"
+            "command": "libqqp:hex-to-10"
           },
           {
             "label": "HEX to IPv4",
-            "command": "libqqp:hex_to_ipv4"
+            "command": "libqqp:hex-to-ipv4"
           },
           {
             "type": "separator"
           },
           {
             "label": "Format HEX text",
-            "command": "libqqp:hex_format"
+            "command": "libqqp:hex-format"
           },
           {
             "type": "separator"
           },
           {
             "label": "Extract HEX from logcat (android_hook)",
-            "command": "libqqp:extract_logcat"
+            "command": "libqqp:extract-logcat"
           },
           {
             "label": "Extract HEX from wireshark",
-            "command": "libqqp:extract_wireshark"
+            "command": "libqqp:extract-wireshark"
           }
         ]
       }
