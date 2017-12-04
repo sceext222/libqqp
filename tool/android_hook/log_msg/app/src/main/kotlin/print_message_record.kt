@@ -31,12 +31,14 @@ fun print_message_record(list: List<Object?>?): String {
 
 // m: com.tencent.mobileqq.data.MessageRecord
 fun _p_message_record(o: StringBuilder, m: Object) {
-    o.append("  MessageRecord: [\n")
+    // print msg type
+    val msg_type = getIntField(m, "msgtype")
+    o.append("  MessageRecord, msgtype = ${get_msg_type(msg_type)} (${msg_type}): [\n")
 
     // public ArrayList atInfoList
-    _p_array_list(o, m, "atInfoList")
+    _p_atinfo_list(o, m, "atInfoList")
     // public ArrayList atInfoTempList
-    _p_array_list(o, m, "atInfoTempList")
+    _p_atinfo_list(o, m, "atInfoTempList")
 
     // public int extInt
     _p_int(o, m, "extInt")
@@ -169,8 +171,7 @@ fun _p_sticker_info(o: StringBuilder, m: Object, name: String) {
     o.append("    ${name}: StickerInfo TODO  ${si}\n")
 }
 
-// TODO
-fun _p_array_list(o: StringBuilder, m: Object, name: String) {
+fun _p_atinfo_list(o: StringBuilder, m: Object, name: String) {
     val list = getObjectField(m, name) as ArrayList<Object?>?
     if (list == null) {
         o.append("    ${name}: ArrayList  <<null>>\n")
@@ -182,10 +183,13 @@ fun _p_array_list(o: StringBuilder, m: Object, name: String) {
             o.append("      <<null>>\n")
             continue
         }
-        // TODO
-        o.append("      ${i}\n")
+        _p_at_info(o, i)
     }
     o.append("    ]\n")
+}
+
+fun _p_at_info(o: StringBuilder, m: Object) {
+    // TODO
 }
 
 
