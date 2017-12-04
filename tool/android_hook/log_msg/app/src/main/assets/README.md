@@ -8,12 +8,14 @@ Hook package: `com.tencent.mobileqq`, version `7.2.5` (`744`)
 
 Hook class: `com.tencent.mobileqq.app.message.QQMessageFacade`
 
-Hook methods: (1)
+Hook methods: (2)
 
 |  # | hook type | method |
 | -: | :-------: | :----- |
 |  1 | [before]  | `.method private a(Ljava/util/List;Lcom/tencent/mobileqq/persistence/EntityManager;ZZZZ)V` |
 |    |           | `private void a(List<MessageRecord>, EntityManager, boolean, boolean, boolean, boolean)` |
+|  2 | [before]  | `public void a(MessageRecord, MessageObserver, boolean)` |
+|  3 | [after]   | `public QQMessageFacade(QQAppInterface)` (constructor) |
 
 
 ## How to use this tool

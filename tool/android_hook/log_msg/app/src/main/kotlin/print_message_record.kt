@@ -34,6 +34,16 @@ fun print_message_record(list: List<Object?>?, prefix: String = ""): String {
     return o.toString()
 }
 
+fun print_one_message_record(m: Object?): String {
+    if (m == null) {
+        return "null"
+    }
+    val o = StringBuilder()
+    // FIXME
+    _p_message_record(o, m, PREFIX)
+    return o.toString()
+}
+
 // m: com.tencent.mobileqq.data.MessageRecord
 fun _p_message_record(o: StringBuilder, m: Object, prefix: String = "") {
     // print msg type
