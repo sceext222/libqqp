@@ -10,9 +10,9 @@ Hook class: `com.tencent.mobileqq.app.message.QQMessageFacade`
 
 Hook methods: (1)
 
-|  # | hook type | method |
-| -: | :-------: | :----- |
-|  1 | [before]  | `private void m5193a(List<MessageRecord>, EntityManager, boolean, boolean, boolean, boolean)` |
+|  # | hook type | method | .. |
+| -: | :-------: | :----- | :- |
+|  1 | [before]  | `.method private a(Ljava/util/List;Lcom/tencent/mobileqq/persistence/EntityManager;ZZZZ)V` | `private void a(List<MessageRecord>, EntityManager, boolean, boolean, boolean, boolean)` |
 
 
 ## How to use this tool
