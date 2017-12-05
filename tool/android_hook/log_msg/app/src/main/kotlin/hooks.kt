@@ -31,8 +31,8 @@ class Hooks(val cl: ClassLoader) {
                 val text = print_message_record(param.args[0] as List<Object?>?)
                 val bs = "${param.args[2] as Boolean}, ${param.args[3] as Boolean}, ${param.args[4] as Boolean}, ${param.args[5] as Boolean}"
                 log_debug("${A}: ${bs}, ${param.args[1] as Object?}, ${text}")
-
-                // FIXME
+            }
+            override fun afterHookedMethod(param: MethodHookParam) {
                 call_on_msg(param.args[0] as List<Object?>?)
             }
         })
