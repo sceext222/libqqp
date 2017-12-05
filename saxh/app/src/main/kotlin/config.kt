@@ -16,8 +16,11 @@ class Config {
         const val PACKAGE_VERSION: String = "7.2.5 (744)"
 
         // runtime vars
-        var debug_print_msg: Boolean = false
+        var master: String? = null  // master uin
 
-        // TODO
+        // debug flags
+        var debug_print_msg: Boolean = false
+        var debug_echo: Boolean = false
+        var debug_echo_at_only: Boolean = false
     }
 }
