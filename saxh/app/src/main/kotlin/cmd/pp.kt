@@ -86,8 +86,8 @@ fun _debug_echo(h: Hooks, m: DecodedMsg, text: String) {
     if ((m.is_troop == 1) and (Config.debug_echo_at_only) and (! m.is_at_me)) {
         return
     }
-    // not echo self send
-    if (_is_send(m)) {
+    // do not echo self send
+    if ((m.sender_uin == m.self_uin) or (m.is_send == 1)) {
         return
     }
     send_text(h, m, ECHO_PREFIX + text)
