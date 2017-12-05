@@ -20,6 +20,7 @@ const val F_FRIEND_UIN: String = "frienduin"
 const val F_IS_TROOP: String = "istroop"
 const val F_SELF_UIN: String = "selfuin"
 const val F_SENDER_UIN: String = "senderuin"
+const val F_IS_SEND: String = "issend"
 const val F_A: String = "a"
 
 
@@ -55,6 +56,7 @@ fun _on_one_msg(h: Hooks, m: Object) {
         setIntField(msg, F_IS_TROOP, is_troop)
         setObjectField(msg, F_SELF_UIN, self_uin)
         setObjectField(msg, F_SENDER_UIN, self_uin)
+        setIntField(msg, F_IS_SEND, 1)
         setObjectField(msg, F_MSG, SEND_TEXT)
         // call QQMessageFacade.a(MessageRecord, MessageObserver)
         callMethod(h.qq_message_facade, F_A, msg, null)
